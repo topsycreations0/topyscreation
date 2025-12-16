@@ -20,7 +20,7 @@ const corsOptions = {
   origin: [
     "https://topyscreations-6wyn9u4zv-topsycreations0s-projects.vercel.app",
     "https://admin-topyscreation.vercel.app",
-    "https://topyscreations.vercel.app/"
+    "https://topyscreations.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "token"]
