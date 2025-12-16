@@ -1,0 +1,16 @@
+node_modules
+
+*.env
+
+---
+
+### 2. Add a `.gitignore` File
+**Purpose**: To prevent unnecessary files from being tracked by Git.
+
+#### Example `.gitignore`:
+```plaintext
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
