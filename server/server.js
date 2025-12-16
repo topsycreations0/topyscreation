@@ -22,7 +22,7 @@ const corsOptions = {
     "https://admin-topyscreation.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization", "token"]
 }
 
 app.use(cors(corsOptions))
