@@ -11,21 +11,35 @@ import orderRouter from './routes/orderRoute.js'
 // App Configuration
 const app = express()
 const port = process.env.PORT || 4000
+
 connectDB()
 connectCloudinary()
 
-// middleware
+// CORS (FINAL FIX)
+const corsOptions = {
+  origin: [
+    "https://topyscreations-6wyn9u4zv-topsycreations0s-projects.vercel.app",
+    "https://admin-topyscreation.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}
+
+app.use(cors(corsOptions))
+app.options("*", cors(corsOptions))
+
 app.use(express.json())
-app.use(cors())
 
-// api endpoints
-app.use('/api/user',userRouter)
-app.use('/api/product',productRouter)
-app.use('/api/cart',cartRouter)
-app.use('/api/order',orderRouter)
+// API endpoints
+app.use('/api/user', userRouter)
+app.use('/api/product', productRouter)
+app.use('/api/cart', cartRouter)
+app.use('/api/order', orderRouter)
 
-app.get('/',(req,res)=>{
-    res.send("API Working")
+app.get('/', (req, res) => {
+  res.send("API Working")
 })
 
-app.listen(port, ()=> console.log('Server started on Port : ' + port))
+app.listen(port, () =>
+  console.log('Server started on Port : ' + port)
+)
