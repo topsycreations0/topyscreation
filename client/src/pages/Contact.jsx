@@ -12,8 +12,8 @@ const Contact = () => {
         <img className='w-full md:max-w-[480px]' src={assets.contact_img} alt="contact image" />
         <div className='flex flex-col justify-center items-start gap-6'>
           <p className='font-semibold text-xl text-gray-600'>Our Store</p>
-          <p className='text-gray-500'>27 Kola Amodu Street <br /> Suite 350, Lagos, Nigeria</p>
-          <p className='text-gray-500'>Tel: +234-818-295-6758 <br /> Email: topsycreation@gmail.com</p>
+          <p className='text-gray-500'>No 9, Moremi Street off Aare Avenue <br /> New Bodija, Ibadan, Nigeria</p>
+          <p className='text-gray-500'>Tel: +234-818-295-6758 <br /> Email: topsycreations0@gmail.com</p>
           <p></p>
           <p></p>
         </div>
