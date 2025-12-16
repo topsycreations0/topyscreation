@@ -18,6 +18,10 @@ productRouter.options("*", (req, res) => {
 // Routes
 productRouter.post(
   '/add',
+  (req, res, next) => {
+    if (req.method === "OPTIONS") return res.sendStatus(200); // bypass auth + multer
+    next();
+  },
   adminAuth,
   upload.fields([
     { name: 'image1', maxCount: 1 },
